@@ -6,7 +6,9 @@ import Footer from '../components/Footer/Footer';
 const MainLayouts = () => {
     return <>
     <Navbar></Navbar>
+    <div className='min-h-[calc(100vh-116px)]'>
     <Outlet></Outlet>
+    </div>
     <Footer></Footer>
     </>;
 };
