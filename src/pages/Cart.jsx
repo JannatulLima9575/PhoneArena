@@ -1,13 +1,12 @@
 import React from 'react';
 import Navbar from './../components/Navbar/Navbar';
 
-const ErrorPages = () => {
+const Cart = () => {
     return (
         <div>
-            <Navbar></Navbar>
-            <h1>Opss! Not Found</h1>
+            <h1>This a cart</h1>
         </div>
     );
 };
 
-export default ErrorPages;
+export default Cart;
