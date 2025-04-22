@@ -11,11 +11,12 @@ export const router = createBrowserRouter([
     {
     path: "/",
     Component: MainLayouts,
-    errorElement: ErrorPages,
+    errorElement: <ErrorPages/>,
     children: [
         {
             path: "/",
-            Component: Home,
+            element: <Home/>,
+            loader: () => fetch('phones.json'),
         },
         {
             path: "/Favorites",
