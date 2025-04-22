@@ -21,7 +21,10 @@ const PhoneContainer = ({ phones }) => {
         </div>
             
                     <button 
-                    onClick={() => setShowAll(prv => !prv)}
+                    onClick={() => {
+                        setShowAll(prv => !prv)
+                        if (showAll) window.scrollTo(0, 400)
+                    }}
                     className="relative inline-block text-lg group cursor-pointer">
                         <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
                         <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
