@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PhoneCard from './../PhoneCard/PhoneCard';
+import Buttons from './../UI/Buttons';
 
 const PhoneContainer = ({ phones }) => {
     const [displayPhones, setDisplayPhones] = useState([])
@@ -20,7 +21,7 @@ const PhoneContainer = ({ phones }) => {
     ))}
         </div>
             
-                    <button 
+                    {/* <button 
                     onClick={() => {
                         setShowAll(prv => !prv)
                         if (showAll) window.scrollTo(0, 400)
@@ -32,7 +33,14 @@ const PhoneContainer = ({ phones }) => {
                         <span className="relative">{showAll ? 'Show Less' : 'Show All'}</span>
                         </span>
                         <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0" data-rounded="rounded-lg"></span>
-                    </button>
+                    </button> */}
+
+            <Buttons type='submit' 
+            onClick={() => {
+                setShowAll(prv => !prv)
+                if (showAll) window.scrollTo(0, 400)
+            }} 
+            label={showAll ? 'Show Less' : 'Show All'}/>
 
         </div>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import Buttons from './../components/UI/Buttons';
+import { MdBookmarkAdd } from "react-icons/md";
 
 const Details = () => {
     const data = useLoaderData();
@@ -14,8 +15,8 @@ const Details = () => {
             <div className="flex justify-between">
             <h1 className='text-6xl font-thin mb-8'>{name}</h1>
             <div>
-               <Buttons label='cart'/>
-               <Buttons label='favorite'/> 
+                <Buttons label='cart'/>
+                <Buttons label={<MdBookmarkAdd />}/> 
             </div>
             </div>
         </div>
